@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de fps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Clássicos dos Jogos fps</h1>
+
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('Valorant')">Valorant </button>
+        <button class="tab-button" onclick="showTab('CSGO')">CSGO</button>
+        <button class="tab-button" onclick="showTab('Call of Duty')">Call of Duty</button>
+        <button class="tab-button" onclick="showTab('Escola')">Escola</button>
+    </div>
+
+    <div id="Valorant" class="tab-content active">
+        <h2>Valorant</h2>
+        <img src="img/e3eacd9e3878ea96db8b104512ebe02b.jpg" alt="Valorant" width="300">
+        <p>Valorant é um jogo eletrônico multijogador gratuito para jogar de tiro em primeira pessoa desenvolvido e publicado pela Riot Games.</p>
+    </div>
+
+    <div id="CSGO" class="tab-content">
+        <h2>CSGO</h2>
+        <img src="img/3723004.jpg" alt="CSGO" width="300">
+        <p>Counter-Strike: Global Offensive foi um jogo online desenvolvido pela Valve Corporation e pela Hidden Path Entertainment, sendo uma sequência de Counter-Strike: Source. É o quarto título principal da franquia.
+        </p>
+    </div>
+
+    <div id="Call of Duty" class="tab-content">
+        <h2>Call of Duty</h2>
+        <img src="img/676791.jpg" alt="Call of Duty" width="300">
+        <p>Call of Duty: Warzone é um jogo eletrônico free-to-play do gênero battle royale desenvolvido pela Infinity Ward e Raven Software e publicado pela Activision</p>
+    </div>
+
+    <div id="Escola" class="tab-content">
+        <h2>Atividades</h2>
+        <img src="img/69696969.jpg" alt="Escola" width="300">
+        <p>Para que serve a TAG "input" e "label"?
+            A tag "input" define um campo de entrada de dados em um formulário HTML, permitindo que o usuário insira informações.
+            A tag "label" associa um rótulo a um elemento de entrada, facilitando a identificação e uso daquele campo, especialmente para usuários com deficiências. 
+        </p>
+    </div>
+
+</div>
+
+<script>
+    function showTab(tabId) {
+        // Oculta todos os conteúdos
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Desativa todos os botões
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // Mostra a aba clicada
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

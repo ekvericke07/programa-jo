@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festejando a Conexão Campo e Cidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        header, footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            max-width: 400px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #comment {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .tab-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Festejando a Conexão Campo e Cidade</h1>
+        <p>Uma celebração das tradições rurais e urbanas, em harmonia com a modernidade.</p>
+    </header>
+
+    <div id="Valorant" class="tab-content active">
+        <h2>O que é o programa Agrinho e para o que serve</h2>
+        <p>O Programa Agrinho é um programa de responsabilidade social que visa promover a educação ambiental, o desenvolvimento sustentável e a cidadania em escolas públicas e privadas, especialmente nas zonas rurais. Ele incentiva a participação ativa de estudantes, professores e comunidade em projetos que abordam temas como agricultura, meio ambiente, saúde, cidadania e empreendedorismo.</p>
+    </div>
+    
+    <main>
+        <section id="video-section">
+            <h2>Assista ao Vídeo:</h2>
+            <video controls>
+                <source src="img/campoecidade.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </section>
+
+        <section id="image-section">
+            <h2>Imagem da Conexão</h2>
+            <img src="img/campo_cidade_imagem.jpg" alt="campo_cidade">
+            <p id="image-description">Uma paisagem que mistura o verde do campo com os arranha-céus das grandes cidades.</p>
+        </section>
+
+        <section id="input-section">
+            <h2>Deixe seu comentário:</h2>
+            <input type="text" id="userInput" placeholder="Digite sua opinião..." />
+            <button onclick="submitComment()">Enviar</button>
+            <p id="comment"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Festejando a Conexão Campo e Cidade. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function submitComment() {
+            const input = document.getElementById("userInput").value;
+            const commentDisplay = document.getElementById("comment");
+            if (input.trim() !== "") {
+                commentDisplay.textContent = `Você comentou: "${input}"`;
+            } else {
+                commentDisplay.textContent = "Por favor, escreva algo antes de enviar.";
+            }
+        }
+    </script>
+</body>
+</html>
